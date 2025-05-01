@@ -189,7 +189,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available
 # Bar configuration
 bar {
-    status_command i3status
+    status_command i3status -c ~/.config/i3/i3status/config
     position top
     colors {
         background #2e3440
