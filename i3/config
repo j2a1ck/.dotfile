@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-#####################################################################################################################
-#################                          Define the $mod variable/key                             #################
-#####################################################################################################################
 
-# Key to rule them all : Super(Windows) or Alt key?
-
-# Mod4 = Windows or Super key on keyboard
-# Mod1 = Alt key on keyboard
-
-#Set Alt key
-#set $mod Mod1
-
-#set Super key
-=======
->>>>>>> 991f324553dc7a7184f6300f178f171aed86905d
 set $mod Mod4
 
 
