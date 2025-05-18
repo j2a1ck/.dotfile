@@ -80,7 +80,7 @@ mode "$mode_system" {
 
 
 # ArcoLinux Logout
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the za< shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 #####################################################################################################################
@@ -242,7 +242,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #################                          applications keyboard shortcuts                          #################
 #####################################################################################################################
 
-bindsym $mod+Return exec --no-startup-id ptyxis;focus
+bindsym $mod+Return exec --no-startup-id ptyxis --new-window
 
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
@@ -273,8 +273,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #####################################################################################################################
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+bindsym F2 exec brightnessctl set 5%-
+bindsym F3 exec brightnessctl set +5%
+
+
 
 
 #####################################################################################################################
@@ -419,3 +421,19 @@ exec xset r rate 300 50 &
 bindsym Print exec flameshot gui
 # add persian keyboard
 exec --no-startup-id setxkbmap -layout us,ir -option grp:alt_shift_toggle
+
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+ # screen before suspend. Use loginctl lock-session to lock your screen.
+ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+
+
+assign [class="brave-browser"] 1
+assign [class="Code"] 2
+assign [class="nekoray"] 5
+
+
+exec --no-startup-id brave
+exec --no-startup-id code
+exec --no-startup-id nekoray
