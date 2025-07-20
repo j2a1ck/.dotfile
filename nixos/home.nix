@@ -1,0 +1,1 @@
+/home/jack/.config/nixpkgs/home.nix
