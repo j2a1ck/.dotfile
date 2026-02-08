@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch AyuGram and kill it every 10 seconds
+After=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "while true; do pgrep -x AyuGram && pkill -x AyuGram; sleep 180; done"
+Restart=always
